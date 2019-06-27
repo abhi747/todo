@@ -1,0 +1,10 @@
+.list-container {
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.list-container > * {
+  flex: 0.5;
+}
