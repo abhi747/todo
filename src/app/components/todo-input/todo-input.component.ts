@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 
 import { TodoService } from './../../shared/todo.service'
 
@@ -24,8 +24,7 @@ export class TodoInputComponent implements OnInit {
   addTodo() {
     if(this.todoForm.valid) {
       this._todoService.addTodo(this.todoForm.get('todo').value);
-      this.todoForm.get('todo').reset();
-      this.todoForm.get('todo').markAsPristine();
+      this.todoForm.reset();
     }
   }
 

@@ -1,8 +1,10 @@
-  <form [formGroup]="todoForm" class="form-container">
-    <mat-form-field>
-      <input matInput 
-      formControlName="todo" 
-      placeholder="What needs to be done?" 
-      (keyup.enter)="addTodo()">
-    </mat-form-field>
+  <form class="form-container">
+    <ng-container [formGroup]="todoForm">
+      <mat-form-field>
+        <input matInput 
+        formControlName="todo" 
+        placeholder="What needs to be done?" 
+        (keyup.enter)="addTodo()">
+      </mat-form-field>
+    </ng-container>
   </form>
